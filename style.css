@@ -1,0 +1,298 @@
+/*geral*/
+*
+{
+    font-family: sans-serif;
+}
+a
+{
+    text-decoration: none;
+}
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: white;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid white;  /* creates padding around scroll thumb */
+    background-color: black;
+  }
+/*topo da pagina*/
+.titulo
+{
+    text-align: center;
+    padding-top: 15px;
+}
+
+.fa-shopping-cart
+{
+    color: white; 
+    position: absolute;
+    top: 50%;
+    right: 30%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+
+.icon:hover
+{
+    box-shadow: 0 0 1em black;
+    transition: 0.4s;
+}
+
+.icon
+{
+    cursor: pointer;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgb(33, 155, 255);
+    background-color: rgb(33, 155, 255);
+    float: right;
+}
+/*modal*/
+
+.modal
+{
+    display:none;
+    position: fixed;
+    width: 30%;
+    height: 100%;
+    background-color: rgba(49, 128, 253, 1);
+    right: 0px;
+    top: 0px;
+    overflow: auto;
+}
+#checkbox_modal:checked + .modal
+{
+    display: block;
+    transition: 1s;
+}
+.checkbox_modal
+{
+    display: none;
+}
+
+.modal .fechar_modal
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.fechar_modal
+{
+    color: red;
+}
+
+.modal .fechar_modal:hover
+{
+    cursor: pointer;
+    color: white;
+}
+
+.modal::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+  
+.modal::-webkit-scrollbar-track {
+    background: white;        /* color of the tracking area */
+}
+  
+.modal::-webkit-scrollbar-thumb {
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid white;  /* creates padding around scroll thumb */
+    background-color: black;
+}
+
+p
+{
+    font-weight: bold;
+}
+
+.elemento1-text
+{
+    margin-top: 1%;
+    margin-left: 10px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-left: 115px;
+    color: white;
+}
+.elemento-text
+{
+    margin-top: 1%;
+    margin-left: 10px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-left: 115px;
+    color: white;
+}
+
+.cart_item1
+{
+    width: 60%;
+    height: 105px;
+    margin-top: 20%;
+    border: 1px solid white;
+    display: none;
+    margin-left: 10px;
+    display: inline-block;
+    position: relative;
+}
+.cart_item
+{
+    width: 60%;
+    height: 105px;
+    margin-top: 2%;
+    border: 1px solid white;
+    display: none;
+    margin-left: 10px;
+    display: inline-block;
+    position: relative;
+    
+}
+
+.img
+{
+    height: 105px;
+    width: 105px;
+    float: left;
+}
+
+.conteudo-modal
+{
+    text-align: center;
+    color: white;
+    margin-top: 60px;
+}
+
+/*cards*/
+.cards
+{
+    text-align: center;
+}
+
+.card-clothes
+{
+    width: 28vh;    
+    height: 35vh;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 25px;
+    background-color: white;
+    text-align: center;
+}
+
+.card-clothes:hover
+{
+    box-shadow: 0 0 1em black;  
+}
+
+.card-clothes button
+{
+    width: 10vh;
+    height: 10%;
+    background-color: white;
+    font-weight: bold;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.card-clothes button:hover
+{
+    color: gray;
+    transition: 0.4s;
+}
+
+img
+{
+    width: 100%;
+}
+
+/*responsividade*/
+
+@media only screen and (max-width: 1000px)
+{
+    .modal
+    {
+        width: 100%;
+    }
+    .fechar_modal p
+    {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 1000px) and (orientation: landscape)
+{
+    .card-clothes
+    {
+        width: 25%;
+        height: 48vh;
+        text-align: center;
+    }
+
+    .card-clothes img
+    {
+        width: 80%;
+    }
+
+    .card-clothes button
+    {
+        margin-right: 15%;
+    }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 1200px)
+{
+    body
+    {
+        margin-right: 40%;
+        height: 450vh;
+    }
+    .modal
+    {
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+    }
+    #checkbox_modal:checked + .modal
+    {
+        display: block;
+        transition: 1s;
+    }
+    .checkbox_modal
+    {
+        display: none;
+    }
+    .modal h2
+    {
+        margin-right: 30%;
+    }
+    .cart_item1
+    {
+        margin-top: 10%;
+    }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 1200px) and (orientation: landscape)
+{
+    body
+    {
+        margin-left: 10%;
+        height: 450vh;
+    }
+    
+}
